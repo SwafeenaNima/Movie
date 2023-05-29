@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<form enctype="multipart/form-data" method="post" id="movie_form" ><input type="hidden" name="csrfmiddlewaretoken" value="sbH1zTdxbLfmV4if7CxdOqRD2lSTI2OZ6Sby1PuhmXhZQPs9fsi3KbfhPwY3R0Bq">
+ <label class="required" for="id_name">Name:</label>
+<input type="text" name="name" class="vTextField" maxlength="250" required id="id_name">
+<label class="required" for="id_desc">Desc:</label>
+<textarea name="desc" cols="40" rows="10" class="vLargeTextField" required id="id_desc">
+</textarea>
+ <label class="required" for="id_year">Year:</label>
+<input type="number" name="year" class="vIntegerField" required id="id_year">
+<label class="required" for="id_img">Img:</label>
+<input type="file" name="img" accept="image/*" required id="id_img">
+<input type="submit" value="Save" class="default" name="_save">
+</form>
+{% endblock %}
